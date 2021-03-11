@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4ba18/fast 
+/usr/bin/make -f CMakeFiles/cmTC_4ba18.dir/build.make CMakeFiles/cmTC_4ba18.dir/build
+make[1]: Entering directory '/home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4ba18.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_4ba18.dir/CheckSymbolExists.c.o   -c /home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_4ba18
+/home/sobral/clion-2019.1.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ba18.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_4ba18.dir/CheckSymbolExists.c.o  -o cmTC_4ba18 
+CMakeFiles/cmTC_4ba18.dir/CheckSymbolExists.c.o: Na função "main":
+CheckSymbolExists.c:(.text+0x1b): referência não definida para "pthread_create"
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4ba18.dir/build.make:86: recipe for target 'cmTC_4ba18' failed
+make[1]: *** [cmTC_4ba18] Error 1
+make[1]: Leaving directory '/home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_4ba18/fast' failed
+make: *** [cmTC_4ba18/fast] Error 2
+
+File /home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b43f3/fast 
+/usr/bin/make -f CMakeFiles/cmTC_b43f3.dir/build.make CMakeFiles/cmTC_b43f3.dir/build
+make[1]: Entering directory '/home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b43f3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b43f3.dir/CheckFunctionExists.c.o   -c /home/sobral/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b43f3
+/home/sobral/clion-2019.1.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b43f3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_b43f3.dir/CheckFunctionExists.c.o  -o cmTC_b43f3 -lpthreads 
+/usr/bin/ld: não foi possível localizar -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b43f3.dir/build.make:86: recipe for target 'cmTC_b43f3' failed
+make[1]: *** [cmTC_b43f3] Error 1
+make[1]: Leaving directory '/home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_b43f3/fast' failed
+make: *** [cmTC_b43f3/fast] Error 2
+
+

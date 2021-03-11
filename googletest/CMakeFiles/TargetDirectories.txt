@@ -1,0 +1,4 @@
+/home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/rebuild_cache.dir
+/home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/gtest.dir
+/home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/edit_cache.dir
+/home/sobral/CLionProjects/Primeiro/googletest/CMakeFiles/gtest_main.dir
